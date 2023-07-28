@@ -9,5 +9,9 @@ edition = "2021"
 name = "naive"
 path = "src/naive.rs"
 
+[[bin]]
+name = "voigt"
+path = "src/voigt.rs"
+
 [dependencies]
 gnuplot = "0.0.39"

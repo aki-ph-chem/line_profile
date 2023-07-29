@@ -37,3 +37,20 @@ Gauss関数はドップラー幅を表現するのに用いられる関数で、
 $$
 G(x) = \frac{\sqrt{\ln(2) / \pi}}{\sigma / 2} \exp\left(-\frac{(x - x_{centor})^2}{\sigma/ 2}\right)
 $$
+
+### Voigt関数
+
+蛍光寿命による線幅の広がり、ドップラー効果による線幅の広がりの両方を考慮することが必要な場合では２つの関数の畳み込み
+
+$$
+V(x: \sigma, \gamma) = \int_{-\infty}^{\infty} dx^{\prime} G(x^{\prime}; \sigma) L(x - x^{\prime}; \gamma) 
+$$
+
+によって定義される`voight関数` $V(x: \sigma, \gamma)$ を用いる。
+しかし、この積分を解析的に評価することは困難であるので一般的には近似的な方法が用いられる。
+一番簡単な方法は適当な重み $\eta$ を付けてLorentz関数、Gauss関数を足し合わせる方法である。
+
+$$
+V(x: \sigma, \gamma) = \eta G(x^{\prime}; \sigma) + (1 - \eta) L(x - x^{\prime}; \gamma)  \quad(0 < \eta \le 1) 
+$$
+

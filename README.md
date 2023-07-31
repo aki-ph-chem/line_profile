@@ -37,6 +37,14 @@ $$
 G(x) = \frac{\sqrt{\ln(2) / \pi}}{\sigma / 2} \exp\left(-\frac{(x - x_{centor})^2}{\sigma/ 2}\right)
 $$
 
+実際に計算したLorentz線形、Gauss線形で線幅を付けてplotしたものを示す。
+赤色がLorentz関数によるもので、水色がGauss関数によるものである。どちらも線幅(FWHM)は0.004とした
+
+<img src="figure/lorentz_gauss.svg" width="450" height="350">
+
+Fig.1. Lorentz関数、Gauss関数によって幅付けされた信号
+
+
 ### Voigt関数
 
 蛍光寿命による線幅の広がり、ドップラー効果による線幅の広がりの両方を考慮することが必要な場合では２つの関数の畳み込み
@@ -52,3 +60,10 @@ $$
 $$
 V(x: \sigma, \gamma) = \eta G(x^{\prime}; \sigma) + (1 - \eta) L(x - x^{\prime}; \gamma)  \quad(0 < \eta \le 1) 
 $$
+
+実際に計算したLorentz線形、Gauss線形, voigt関数で線幅を付けてplotしたものを示す。
+赤色がLorentz関数、水色がGauss関数、黄緑色がvoigt関数によるものである。どちらも線幅(FWHM)は0.004とした。またvoigt関数の $\eta$ は0.5とした
+
+<img src="figure/voigt.svg" width="450" height="350">
+
+Fig.2. Lorentz関数、Gauss関数, voigt関数によって幅付けされた信号
